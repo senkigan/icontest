@@ -1,0 +1,184 @@
+/* --- UI Variables --- */
+:root {
+    --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-ios: "SF Pro Text", sans-serif;
+    --font-android: "Roboto", sans-serif;
+
+    /* Light Theme UI */
+    --bg-color: #f7f7f7;
+    --text-color: #333;
+    --header-color: #111;
+    --subtitle-color: #666;
+    --card-bg-color: #ffffff;
+    --card-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    --border-color: #e5e5e5;
+    --input-bg: #fff;
+
+    /* iOS Light Preview */
+    --ios-preview-bg: #f5f5f7;
+    --ios-text-primary: #1d1d1f;
+    --ios-text-secondary: #8a8a8e;
+    --ios-get-bg: #eef0f2;
+    --ios-get-text: #007aff;
+
+    /* Android Light Preview */
+    --android-preview-bg: #fdfdfd;
+    --android-text-primary: #202124;
+    --android-company-text: #00875f;
+    --android-ratings-text: #5f6368;
+    --android-install-bg: #00875f;
+    --android-install-text: white;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body.dark-mode {
+    /* Dark Theme UI */
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --header-color: #f5f5f7;
+    --subtitle-color: #888;
+    --card-bg-color: #1e1e1e;
+    --card-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    --border-color: #3a3a3c;
+    --input-bg: #2c2c2e;
+
+    /* iOS Dark Preview */
+    --ios-preview-bg: #2c2c2e;
+    --ios-text-primary: #ffffff;
+    --ios-text-secondary: #8d8d93;
+    --ios-get-bg: #3a3a3c;
+    --ios-get-text: #0a84ff;
+
+    /* Android Dark Preview */
+    --android-preview-bg: #202124;
+    --android-text-primary: #e8eaed;
+    --android-company-text: #3ddc84;
+    --android-ratings-text: #9aa0a6;
+    --android-install-bg: #3ddc84;
+    --android-install-text: #202124;
+}
+
+/* --- Base Styles --- */
+body {
+    font-family: var(--font-ui);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container { max-width: 1100px; width: 100%; display: flex; flex-direction: column;}
+
+header { text-align: center; margin-bottom: 30px; }
+header h1 { font-size: 2.5rem; font-weight: 700; margin: 0 0 10px 0; color: var(--header-color); }
+header .subtitle { font-size: 1.1rem; color: var(--subtitle-color); margin: 0 0 20px 0; }
+
+/* --- Theme Switcher --- */
+.theme-switcher { display: flex; justify-content: center; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--subtitle-color); }
+.switch { position: relative; display: inline-block; width: 44px; height: 24px; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 24px; }
+.slider:before { position: absolute; content: ""; height: 18px; width: 18px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+input:checked + .slider { background-color: #007aff; }
+input:checked + .slider:before { transform: translateX(20px); }
+
+/* --- Controls --- */
+.controls-wrapper {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 0 auto 40px auto;
+    max-width: 800px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: var(--card-shadow);
+}
+.file-upload-group { text-align: center; }
+.recommendation { font-size: 0.8rem; color: var(--subtitle-color); display: block; margin-top: 8px; }
+.text-input-group { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+input[type="text"] {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-family: var(--font-ui);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    min-width: 200px;
+}
+input[type="text"]::placeholder { color: var(--subtitle-color); opacity: 0.7; }
+input[type="text"]:focus { outline: none; border-color: #007aff; box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.2); }
+input[type="file"] { display: none; }
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #007aff;
+    color: white;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+.custom-file-upload:hover { background-color: #0056b3; }
+
+/* --- Preview Area --- */
+.preview-area { display: flex; gap: 30px; justify-content: center; flex-grow: 1;}
+.platform-section { flex: 1; background-color: var(--card-bg-color); border-radius: 16px; padding: 25px; box-shadow: var(--card-shadow); min-width: 350px; max-height: 410px; transition: background-color 0.3s; }
+.platform-section h2 { margin: 0 0 15px 0; font-size: 1.5rem; font-weight: 700; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; }
+.preview-box { margin-top: 25px; }
+.preview-box h3 { font-size: 0.8rem; color: var(--subtitle-color); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.8px; font-weight: 500; }
+.app-icon { object-fit: cover; flex-shrink: 0; background-color: #ccc; }
+.app-info { display: flex; flex-direction: column; flex-grow: 1; }
+
+/* --- iOS Specific Styles --- */
+#ios-section h2 { color: #007aff; }
+.app-store-preview { display: flex; align-items: center; gap: 15px; padding: 15px; background-color: var(--ios-preview-bg); border-radius: 12px; }
+#ios-app-store-icon, #ios-home-screen-icon { width: 65px; height: 65px; border-radius: 22.5%; }
+.app-store-preview .app-name-display { font-family: var(--font-ios); font-weight: 600; color: var(--ios-text-primary); }
+.app-store-preview .app-subtitle { font-family: var(--font-ios); color: var(--ios-text-secondary); font-size: 0.9em; }
+.get-button { background-color: var(--ios-get-bg); color: var(--ios-get-text); font-weight: 600; padding: 6px 18px; border-radius: 14px; font-size: 0.9em; }
+.home-screen-preview { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 10px; }
+.ios-home-screen p { margin: 0; font-size: 0.8rem; color: var(--ios-text-primary); text-align: center; text-shadow: 0 1px 2px rgba(0,0,0,0.1); font-family: var(--font-ios); }
+
+/* --- Android Specific Styles --- */
+#android-section h2 { color: #3ddc84; }
+.play-store-preview { display: flex; align-items: center; gap: 15px; padding: 15px; background-color: var(--android-preview-bg); border-radius: 12px; }
+.play-store-preview .app-info { font-family: var(--font-android); }
+#android-play-store-icon { width: 65px; height: 65px; border-radius: 12px; }
+.play-store-preview .app-name-display { color: var(--android-text-primary); }
+.play-store-preview .company-name { color: var(--android-company-text); font-size: 0.9em; font-weight: 500; }
+.play-store-preview .ratings { color: var(--android-ratings-text); font-size: 0.8em; }
+.install-button { background-color: var(--android-install-bg); color: var(--android-install-text); font-weight: 500; padding: 8px 24px; border-radius: 8px; font-size: 0.9em; }
+.android-icon-background { width: 65px; height: 65px; border-radius: 50%; overflow: hidden; display: flex; justify-content: center; align-items: center; background-color: var(--ios-preview-bg); }
+#android-home-screen-icon { width: 100%; height: 100%; }
+.android-home-screen p { font-family: var(--font-android); margin: 0; font-size: 0.8rem; color: var(--ios-text-primary); text-align: center; }
+
+/* --- Footer --- */
+footer { text-align: center; margin-top: 50px; }
+footer p { color: var(--subtitle-color); font-size: 0.85rem; }
+
+/* --- Responsive Design --- */
+@media (max-width: 800px) {
+    .preview-area { flex-direction: column; align-items: center; }
+    .platform-section { min-width: unset; width: 90%; }
+    .controls-wrapper { flex-direction: column; }
+    header h1 { font-size: 2rem; }
+}
