@@ -1,10 +1,10 @@
 # **IconTest** 🎯
 
-> *Preview your app icons like a pro*
+> *Preview your app icons, it just works™. *
 
 ## **What is IconTest?**
 
-A **lightning-fast** web tool that lets you visualize how your app icon will look on **iOS** and **Android** devices — in both **light** and **dark** modes. No guesswork, just pixel-perfect previews.
+A **lightning-fast** web tool that lets you visualize how your app icon will look on **iOS** and **Android** devices — in both **light** and **dark** modes.
 
 ## **✨ Features**
 
