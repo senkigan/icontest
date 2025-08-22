@@ -3,102 +3,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile App Icon Previewer</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>App Icon Previewer - Test iOS Android Icons Online Free | App Store Icon Viewer</title>
+    <meta name="title" content="App Icon Previewer - Test iOS Android Icons Online Free | App Store Icon Viewer">
+    <meta name="description" content="Free online app icon previewer tool to test and preview your iOS and Android app icons. See how your icon looks on App Store, Google Play, and home screens in light/dark mode. No upload required - 100% browser-based icon testing.">
+    <meta name="keywords" content="app icon previewer, icon tester, iOS icon preview, Android icon preview, app store icon viewer, mobile app icon test, icon design tool, app icon simulator, free icon previewer, app store preview, google play icon, home screen icon test, adaptive icon preview, app icon generator">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourdomain.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:title" content="Free App Icon Previewer - Test iOS & Android Icons Online">
+    <meta property="og:description" content="Preview your app icons on iOS App Store, Android Play Store, and home screens. Test light/dark mode compatibility instantly - no upload required!">
+    <meta property="og:image" content="https://yourdomain.com/app-icon-previewer-social.png">
+    <meta property="og:site_name" content="App Icon Previewer">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourdomain.com/">
+    <meta property="twitter:title" content="Free App Icon Previewer - Test iOS & Android Icons Online">
+    <meta property="twitter:description" content="Preview your app icons on iOS App Store, Android Play Store, and home screens. Test light/dark mode compatibility instantly - no upload required!">
+    <meta property="twitter:image" content="https://yourdomain.com/app-icon-previewer-social.png">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="App Icon Previewer">
+    <meta name="language" content="English">
+    <meta name="theme-color" content="#007aff">
+    
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "App Icon Previewer",
+      "description": "Free online tool to preview and test iOS and Android app icons on App Store, Google Play Store, and home screens",
+      "url": "https://yourdomain.com/",
+      "applicationCategory": "DesignApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "iOS App Store icon preview",
+        "Android Google Play Store icon preview",
+        "Home screen icon simulation",
+        "Light and dark mode testing",
+        "No upload required - browser-based",
+        "Instant preview generation",
+        "Multiple platform comparison"
+      ],
+      "screenshot": "https://yourdomain.com/app-icon-previewer-screenshot.png",
+      "softwareVersion": "1.0",
+      "author": {
+        "@type": "Organization",
+        "name": "App Icon Previewer"
+      }
+    }
+    </script>
+    
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     
     <!-- Load UI Font (Inter) and Preview Fonts (SF Pro Text, Roboto) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto:wght@400;500&family=SF+Pro+Text:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <div class="container">
         <header>
-            <h1>App Icon Previewer</h1>
-            <p class="subtitle">See your app icon on iOS and Android, in light and dark mode.</p>
+            <h1>Free App Icon Previewer - Test iOS & Android Icons Online</h1>
+            <p class="subtitle">Preview your mobile app icons on iOS App Store, Android Google Play Store, and home screens. Test light and dark mode compatibility instantly with our free online icon testing tool.</p>
             <div class="theme-switcher">
-                <span>Light</span>
+                <span>Light Mode</span>
                 <label class="switch">
-                    <input type="checkbox" id="theme-toggle">
+                    <input type="checkbox" id="theme-toggle" aria-label="Toggle between light and dark mode preview">
                     <span class="slider"></span>
                 </label>
-                <span>Dark</span>
+                <span>Dark Mode</span>
             </div>
         </header>
 
-        <div class="controls-wrapper">
-            <div class="control-group file-upload-group">
-                <label for="icon-selector" class="custom-file-upload">
-                    Choose Icon Image
-                </label>
-                <input type="file" id="icon-selector" accept="image/png, image/jpeg, image/webp">
-                <span class="recommendation">1024x1024 PNG recommended</span>
-            </div>
-            <div class="control-group text-input-group">
-                <input type="text" id="app-name-input" placeholder="App Name">
-                <input type="text" id="company-name-input" placeholder="Company Name (Android)">
-                <input type="text" id="app-subtitle-input" placeholder="App Subtitle (iOS)">
-            </div>
-        </div>
+        <main>
+            <section class="controls-wrapper" aria-label="Icon upload and app information controls">
+                <div class="control-group file-upload-group">
+                    <label for="icon-selector" class="custom-file-upload">
+                        Upload Your App Icon Image
+                    </label>
+                    <input type="file" id="icon-selector" accept="image/png, image/jpeg, image/webp" aria-describedby="icon-recommendation">
+                    <span class="recommendation" id="icon-recommendation">1024x1024 PNG recommended for best quality preview</span>
+                </div>
+                <div class="control-group text-input-group">
+                    <input type="text" id="app-name-input" placeholder="Enter Your App Name" aria-label="App name for preview">
+                    <input type="text" id="company-name-input" placeholder="Company Name (for Android Play Store)" aria-label="Company name for Android preview">
+                    <input type="text" id="app-subtitle-input" placeholder="App Subtitle (for iOS App Store)" aria-label="App subtitle for iOS preview">
+                </div>
+            </section>
 
-        <div class="preview-area">
-            <!-- iOS Section -->
-            <div class="platform-section" id="ios-section">
-                <h2>iOS</h2>
-                <div class="preview-box">
-                    <h3>App Store</h3>
-                    <div class="app-store-preview">
-                        <img class="app-icon" id="ios-app-store-icon" src="https://placehold.co/180x180/007aff/white/png?text=App\nIcon" alt="iOS App Store Icon">
-                        <div class="app-info">
-                            <span class="app-name-display">Your App Name</span>
-                            <span class="app-subtitle" id="ios-subtitle-display">A short description</span>
+            <section class="preview-area" aria-label="App icon previews for different platforms">
+                <!-- iOS Section -->
+                <article class="platform-section" id="ios-section">
+                    <h2>iOS App Icon Preview</h2>
+                    <div class="preview-box">
+                        <h3>iOS App Store Preview</h3>
+                        <div class="app-store-preview" role="img" aria-label="iOS App Store preview simulation">
+                            <img class="app-icon" id="ios-app-store-icon" src="https://placehold.co/180x180/007aff/white/png?text=App\nIcon" alt="iOS App Store Icon Preview" loading="lazy">
+                            <div class="app-info">
+                                <span class="app-name-display">Your App Name</span>
+                                <span class="app-subtitle" id="ios-subtitle-display">A short description</span>
+                            </div>
+                            <div class="get-button" role="button" aria-label="Get button simulation">GET</div>
                         </div>
-                        <div class="get-button">GET</div>
                     </div>
-                </div>
-                <div class="preview-box">
-                    <h3>Home Screen</h3>
-                    <div class="home-screen-preview ios-home-screen">
-                        <img class="app-icon" id="ios-home-screen-icon" src="https://placehold.co/180x180/007aff/white/png?text=App\nIcon" alt="iOS Home Screen Icon">
-                        <p class="app-name-display">Your App</p>
+                    <div class="preview-box">
+                        <h3>iOS Home Screen Preview</h3>
+                        <div class="home-screen-preview ios-home-screen" role="img" aria-label="iOS home screen preview simulation">
+                            <img class="app-icon" id="ios-home-screen-icon" src="https://placehold.co/180x180/007aff/white/png?text=App\nIcon" alt="iOS Home Screen Icon Preview" loading="lazy">
+                            <p class="app-name-display">Your App</p>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </article>
 
-            <!-- Android Section -->
-            <div class="platform-section" id="android-section">
-                <h2>Android</h2>
-                 <div class="preview-box">
-                    <h3>Google Play Store</h3>
-                    <div class="play-store-preview">
-                        <img class="app-icon" id="android-play-store-icon" src="https://placehold.co/180x180/007aff/white/png?text=App\nIcon" alt="Android Play Store Icon">
-                        <div class="app-info">
-                            <span class="app-name-display">Your App Name</span>
-                            <span id="android-company-name-display" class="company-name">Your Company</span>
-                            <span class="ratings">4.8 ★  1M+ downloads</span>
+                <!-- Android Section -->
+                <article class="platform-section" id="android-section">
+                    <h2>Android App Icon Preview</h2>
+                    <div class="preview-box">
+                        <h3>Google Play Store Preview</h3>
+                        <div class="play-store-preview" role="img" aria-label="Google Play Store preview simulation">
+                            <img class="app-icon" id="android-play-store-icon" src="https://placehold.co/180x180/007aff/white/png?text=App\nIcon" alt="Android Google Play Store Icon Preview" loading="lazy">
+                            <div class="app-info">
+                                <span class="app-name-display">Your App Name</span>
+                                <span id="android-company-name-display" class="company-name">Your Company</span>
+                                <span class="ratings">4.8 ⭐ 1M+ downloads</span>
+                            </div>
+                            <div class="install-button" role="button" aria-label="Install button simulation">Install</div>
                         </div>
-                        <div class="install-button">Install</div>
                     </div>
-                </div>
-                <div class="preview-box">
-                    <h3>Home Screen (Adaptive Icon)</h3>
-                    <div class="home-screen-preview android-home-screen">
-                        <div class="android-icon-background">
-                            <img class="app-icon" id="android-home-screen-icon" src="https://placehold.co/180x180/007aff/white/png?text=App\nIcon" alt="Android Home Screen Icon">
+                    <div class="preview-box">
+                        <h3>Android Home Screen Preview (Adaptive Icon)</h3>
+                        <div class="home-screen-preview android-home-screen" role="img" aria-label="Android adaptive icon home screen preview">
+                            <div class="android-icon-background">
+                                <img class="app-icon" id="android-home-screen-icon" src="https://placehold.co/180x180/007aff/white/png?text=App\nIcon" alt="Android Adaptive Home Screen Icon Preview" loading="lazy">
+                            </div>
+                            <p class="app-name-display">Your App</p>
                         </div>
-                        <p class="app-name-display">Your App</p>
                     </div>
-                </div>
-            </div>
-        </div>
+                </article>
+            </section>
 
-        <footer >
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shield-check" viewBox="0 0 16 16">
-                <path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.95- .325-1.92- .6-2.837- .855A.508.508 0 0 0 8 1.59l-.002-.001a.51.51 0 0 0-.664.002ZM8 1.793c.346.067.69.194 1.024.365 1.18.58 2.23 1.519 2.94 3.024.928 2.026 1.52 4.582 1.13 7.004-.268 1.636-1.122 3.252-2.122 4.34-.937 1.02-1.946 1.756-2.844 2.133a1.417 1.417 0 0 1-1.121 0c-.898-.377-1.907-1.113-2.844-2.133-1.002-1.088-1.854-2.704-2.122-4.34-.39-2.422.202-4.978 1.13-7.004.71-1.505 1.76-2.444 2.94-3.024A23.864 23.864 0 0 1 8 1.793Z"/>
+            <!-- SEO Content Section -->
+            <section class="seo-content">
+                <div class="content-card">
+                    <h2>Why Use Our App Icon Previewer Tool?</h2>
+                    <p class="lead-text">Our <strong>free app icon previewer</strong> is the ultimate tool for mobile app developers and designers to test and preview their app icons across different platforms. Whether you're developing for <strong>iOS App Store</strong> or <strong>Android Google Play Store</strong>, our icon testing tool helps you visualize exactly how your app icon will appear to users.</p>
+                    
+                    <h3>Key Features of Our Icon Preview Tool</h3>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon">📱</div>
+                            <div class="feature-content">
+                                <h4>iOS App Store Icon Preview</h4>
+                                <p>See how your icon looks in the iOS App Store listing with authentic styling and typography.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🤖</div>
+                            <div class="feature-content">
+                                <h4>Android Google Play Store Preview</h4>
+                                <p>Test your icon appearance on Google Play Store with accurate company info and ratings display.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🏠</div>
+                            <div class="feature-content">
+                                <h4>Home Screen Simulation</h4>
+                                <p>Preview icons on both iOS and Android home screens, including adaptive icon support.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🌓</div>
+                            <div class="feature-content">
+                                <h4>Light and Dark Mode Testing</h4>
+                                <p>Ensure your icon works perfectly in both theme modes with instant switching.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🔒</div>
+                            <div class="feature-content">
+                                <h4>No Upload Required</h4>
+                                <p>100% browser-based processing for complete privacy and security.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">⚡</div>
+                            <div class="feature-content">
+                                <h4>Instant Results</h4>
+                                <p>Real-time preview updates as you make changes to your icon and app details.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Perfect for App Developers and Icon Designers</h3>
+                    <p>Whether you're a seasoned app developer or just starting your mobile app journey, our <strong>app icon tester</strong> helps you make informed design decisions. Test different icon variations, see how they perform in various contexts, and ensure your app stands out in crowded app stores.</p>
+
+                    <h3>How to Use the App Icon Previewer</h3>
+                    <div class="steps-container">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <p>Upload your app icon image (PNG, JPEG, or WebP format)</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <p>Enter your app name and company information</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <p>Toggle between light and dark modes to test compatibility</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <p>View real-time previews across iOS and Android platforms</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">5</div>
+                            <p>Make adjustments and see instant results</p>
+                        </div>
+                    </div>
+
+                    <p class="closing-text">Start previewing your app icons now with our free, professional-grade icon testing tool. No registration required, no watermarks, and completely secure browser-based processing.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shield-check" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.95-.325-1.92-.6-2.837-.855A.508.508 0 0 0 8 1.59l-.002-.001a.51.51 0 0 0-.664.002ZM8 1.793c.346.067.69.194 1.024.365 1.18.58 2.23 1.519 2.94 3.024.928 2.026 1.52 4.582 1.13 7.004-.268 1.636-1.122 3.252-2.122 4.34-.937 1.02-1.946 1.756-2.844 2.133a1.417 1.417 0 0 1-1.121 0c-.898-.377-1.907-1.113-2.844-2.133-1.002-1.088-1.854-2.704-2.122-4.34-.39-2.422.202-4.978 1.13-7.004.71-1.505 1.76-2.444 2.94-3.024A23.864 23.864 0 0 1 8 1.793Z"/>
                 <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
-              </svg>
-              <span>Your images and data are processed entirely in your browser. Nothing is ever uploaded or stored.</span>
+            </svg>
+            <span>Your images and data are processed entirely in your browser. Nothing is ever uploaded or stored. Completely secure and private app icon testing.</span>
         </footer>
     </div>
 
